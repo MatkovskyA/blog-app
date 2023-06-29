@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog App</title>
+</head>
+<body>
+    <div class="project__blog container">
+        <div class="add__new_post">
+            <h2>New post</h2>
+            <div class="post">
+                <input class="title__input js__post_title-input" 
+                type="text" 
+                maxlength="100" placeholder="Post title" required>
+                <p class="limit__characters">Entered characters: 
+                <span class="js__count">0</span> (max. 100)</p>
+                <textarea class="post__input js__post_text-input" 
+                rows="12"
+                type="text" 
+                placeholder="Let's write a new post..." required></textarea>
+            </div>
+            <button class="publish__btn js__publish_btn">
+                Publish
+            </button>
+            <p class="limit__characters_post">No character limit per post</p>
+        </div>
+        <div class="visible__posts item">
+            <h2>Newsline</h2>
+            <div class="posts js__posts">
+                Newsline is empty...
+            </div>
+        </div>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
