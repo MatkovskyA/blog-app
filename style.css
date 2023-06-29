@@ -7,11 +7,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto Slab', serif;
+    background-color: #f4f5ca;
 }
 
 .container {
     margin: 0 auto;
-    width: 750px;
+    max-width: 750px;
     padding: 100px 30px;
 }
 
@@ -70,4 +71,29 @@ h2 {
 
 .date__post {
     color: rgb(93, 93, 238);
+}
+
+.post__input {
+    font-style: italic;
+}
+
+.title__input {
+    font-size: large;
+}
+@media (max-width: 576px) {
+    .project__blog {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .add__new_post, .visible__posts {
+        width: 100%;
+    }
+
+    .limit__characters_post {
+        margin-bottom: 25px;
+    }
 }
