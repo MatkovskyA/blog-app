@@ -31,37 +31,27 @@ publishBtnPost.addEventListener('click', function() {
     postTextInputNode.value = '';
 })
 
-// отключаем кнопку, если поля ввода пустые или содержат пробелы
-
-// function checkInputNode () {
-//     const titleLength = postTitleInputNode.value.length;
-//     const postLength = postTextInputNode.value.length;
-
-//     if (titleLength === null && postLength === null) {
-//         publishBtnPost.disabled = true;
-//     }
-// }
-
-
-// postTitleInputNode.addEventListener("click", checkInputNode);
-// postTextInputNode.addEventListener("click", checkInputNode);
-
-// function checkInputNode() {
-//     const titleLength = postTitleInputNode.value.length;
-//     const postLength = postTextInputNode.value.length;
-
-//     if (titleLength === null && typeof titleLength === "undefined") {
-//         publishBtnPost.disabled = true;
-// }
-//     if (postLength != null && typeof postLength !== "undefined" ) {
-//         publishBtnPost.disabled = true;
-//     }
-// }
-
 // получаем данные поста
 function getPostFromUser() {
-    const title = postTitleInputNode.value;
-    const text = postTextInputNode.value;
+    let publishBtnPost;
+    let title = postTitleInputNode.value;
+    let text = postTextInputNode.value;
+
+// отключаем кнопку, если поля ввода пустые или содержат пробелы
+    if (!postTitleInputNode.value || 
+        typeof postTitleInputNode.value === 'undefined' ||
+        postTitleInputNode.value === null) 
+        {
+        alert('Введите корректный заголовок');
+        publishBtnPost = publishBtnPost.disabled;
+    }
+    if (!postTextInputNode.value ||
+        typeof postTextInputNode.value === 'undefined' ||
+        postTextInputNode.value === null) 
+        {
+        alert('Введите корректный текст поста');
+        publishBtnPost = publishBtnPost.disabled;
+    }
 
     return {
         title: title,
