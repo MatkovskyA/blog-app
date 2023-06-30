@@ -34,23 +34,25 @@ publishBtnPost.addEventListener('click', function() {
 // получаем данные поста
 function getPostFromUser() {
     let publishBtnPost;
-    let title = postTitleInputNode.value;
-    let text = postTextInputNode.value;
+    const title = postTitleInputNode.value;
+    const text = postTextInputNode.value;
 
 // отключаем кнопку, если поля ввода пустые или содержат пробелы
     if (!postTitleInputNode.value || 
         typeof postTitleInputNode.value === 'undefined' ||
-        postTitleInputNode.value === null) 
+        postTitleInputNode.value === null || 
+        !postTitleInputNode.value.trim()) // проверка на пробелы
         {
         alert('Введите корректный заголовок');
-        publishBtnPost = publishBtnPost.disabled;
+
     }
     if (!postTextInputNode.value ||
         typeof postTextInputNode.value === 'undefined' ||
-        postTextInputNode.value === null) 
+        postTextInputNode.value === null ||
+        !postTextInputNode.value.trim()) // проверка на пробелы
         {
         alert('Введите корректный текст поста');
-        publishBtnPost = publishBtnPost.disabled;
+
     }
 
     return {
