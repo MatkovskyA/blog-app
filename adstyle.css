@@ -1,4 +1,4 @@
-@media (max-width: 576px) {
+@media (max-width: 580px) {
     .container {
         padding: 30px 20px;
     }
@@ -6,7 +6,7 @@
     .new__post_title {
         margin-bottom: 35px;
     }
-    
+
     .project__blog {
         display: block;
         flex-wrap: wrap;
