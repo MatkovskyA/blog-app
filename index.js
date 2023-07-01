@@ -1,8 +1,6 @@
 const posts = [];
 
 const maxTitleLength = 100;
-const minTitleLength = 2;
-const minPostLength = '';
 
 const countOfSymbolsTitle = document.querySelector('.js__count');
 const postTitleInputNode = document.querySelector('.js__post_title-input');
@@ -29,6 +27,7 @@ publishBtnPost.addEventListener('click', function() {
 
     postTitleInputNode.value = '';
     postTextInputNode.value = '';
+    countOfSymbolsTitle.textContent = '0';
 })
 
 // получаем данные поста
@@ -44,7 +43,7 @@ function getPostFromUser() {
         !postTitleInputNode.value.trim()) // проверка на пробелы
         {
         alert('Введите корректный заголовок');
-
+        publishBtnPost = publishBtnPost.desibled;
     }
     if (!postTextInputNode.value ||
         typeof postTextInputNode.value === 'undefined' ||
@@ -52,7 +51,7 @@ function getPostFromUser() {
         !postTextInputNode.value.trim()) // проверка на пробелы
         {
         alert('Введите корректный текст поста');
-
+        publishBtnPost = publishBtnPost.desibled;
     }
 
     return {

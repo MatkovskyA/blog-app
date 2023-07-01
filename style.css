@@ -25,7 +25,6 @@ body {
 }
 
 h2 {
-    margin-bottom: 60px;
     font-size: 40px;
     font-weight: 600;
     color: rgb(2, 79, 79);
@@ -45,11 +44,29 @@ h2 {
 .newsline {
     box-sizing: border-box;
 }
-.title__newsline {
+
+.new__post_title {
+    margin-bottom: 60px;
+    background-color: #fff;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+
+.newsline {
     position: sticky;
     background-color: #fff;
     padding: 0px 5px;
     border-radius: 5px;
+}
+
+.posts {
+    padding-top: 103px;
+    border: 1px solid brown;
+    border-radius: 5px;
+    margin-top: 50px;
+    height: 370px;
+    overflow: scroll;
+    padding: 10px;
 }
 
 .post__input {
@@ -66,12 +83,7 @@ h2 {
 }
 
 .visible__posts {
-    border: 1px solid brown;
-    border-radius: 5px;
     width: 45%;
-    height: 470px;
-    overflow: scroll;
-    padding: 10px;
 }
 
 .limit__characters {
@@ -88,9 +100,7 @@ h2 {
     color: rgb(93, 93, 238);
 }
 
-.posts {
-    padding-top: 100px;
-}
+
 .post__input {
     font-style: italic;
     border-bottom: 2px solid black;
@@ -98,28 +108,4 @@ h2 {
 
 .title__input {
     font-size: large;
-}
-@media (max-width: 576px) {
-    .container {
-        padding: 30px 20px;
-    }
-    .project__blog {
-        display: block;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .add__new_post, .visible__posts {
-        width: 100%;
-    }
-
-    .limit__characters_post {
-        margin-bottom: 25px;
-    }
-
-    .posts {
-        padding-top: 0px;
-    }
 }
